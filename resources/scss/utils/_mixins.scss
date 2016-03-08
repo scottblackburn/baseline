@@ -1,0 +1,68 @@
+/*--------------------------------
+
+    Media Queries
+
+    used for outputting content either between media query tags, or without (for fixed-width.scss)
+
+    example: basic usage
+
+    .element {
+        width: 50%;
+
+        @include mq("tablet-small") {
+            width: 20%;
+        }
+    }
+
+    example: using max-width
+
+    .element {
+        width: 50%;
+
+        @include mq("tablet-small", "max") {
+            width: 20%;
+        }
+    }
+
+*/
+
+$fixed-width:       false !default;
+$fixed-width-limit: 980px !default;
+
+@mixin mq($width, $type: min) {
+
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type == max {
+            $width: $width - 1px;
+        }
+    }
+
+    @if $fixed-width {
+
+        @if $width <= $fixed-width-limit {
+            @content;
+        }
+
+    } @else {
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+
+    }
+
+}
+
+/*--------------------------------
+
+    Misc
+
+*/
+
+@mixin selection {
+    ::-moz-selection { @content; }
+    ::selection { @content; }
+}
+
