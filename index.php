@@ -6,7 +6,7 @@ include('_includes/_header.php');
 
     <header>
 
-        <h1 class="h2">Components</h1>
+        <h1 class="h2">Components List</h1>
 
         <ul>
             <li><a href="#branding">Branding</a></li>
