@@ -1,0 +1,11 @@
+// Config
+$button-bgcolor: $c-blue;
+$button-fontcolor: $c-white;
+
+// Base
+.m-button {}
+.m-button--primary {}
+.m-button--secondary {}
+
+// States
+@import "../states/_s-buttons";

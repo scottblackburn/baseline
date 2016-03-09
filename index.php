@@ -34,6 +34,67 @@ include('_includes/_header.php');
 
 </article>
 
+<section>
+    <h1>Grid Gutters</h1>
+    <div class="wrap">
+      <div class="blog-list">
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+      </div>
+    </div>
+</section>
+
+<section>
+    <h1>Grid No Gutters</h1>
+    <div class="wrap">
+      <div class="image-list">
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+      </div>
+    </div>
+</section>
+
+<section>
+    <h1>Grid Gutters</h1>
+    <div class="wrap">
+      <div class="blog-list">
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+        <div>Item</div>
+      </div>
+    </div>
+</section>
+
+
 <?php
 include('_includes/_footer.php');
 ?>

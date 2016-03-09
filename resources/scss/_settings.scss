@@ -46,15 +46,17 @@ $grid-column-gutter: 2.4rem;
 // build mobile first 300+
 
 $breakpoints: (
-    "phone":        400px,
-    "phone-wide":   480px,
+    "small":        400px,
+    "small-medium":   480px,
     "phablet":      560px,
     "tablet-small": 640px,
-    "tablet":       768px,
+    "medium":       768px,
     "tablet-wide":  1024px,
-    "desktop":      1248px,
-    "desktop-wide": 1440px
+    "large":      1248px,
+    "huge": 1440px
 );
+
+$max-width: breakpoint("large");
 
 
 /*--------------------------------
@@ -214,3 +216,24 @@ $w-normal: 400;
 $w-semibold: 600;
 $w-bold: 700;
 $w-heavy: 800;
+
+
+
+// Colours
+
+$c-black: #000;
+$c-white: #fff;
+
+
+
+// z-indexing
+
+/*
+ordered from high to low
+suggested naming convention would be the class/ID the z-index is going on
+*/
+
+$z-indexes: (
+    "site-header",
+    "site-footer"
+);

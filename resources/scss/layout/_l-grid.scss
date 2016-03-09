@@ -1,0 +1,91 @@
+//This uses Susy grid system to calculate the maths
+
+$susy: (
+  columns: 12,
+  gutter-position: split
+  //debug: (image: show)
+);
+
+$onepx-gutters: (
+  columns: 12,
+  gutters: 0,
+  gutter-position: split
+  //debug: (image: show)
+);
+
+.wrap {
+  @include container(1140px);
+}
+
+.blog-list {
+  > div {
+    // .. Mobile styles for the layout here
+    padding: 2rem;
+
+    // Tablet Layout Pattern
+    @media (min-width: 768px) and (max-width: 1024px){
+      @include span(6);
+      margin-top: gutter();
+      margin-bottom: gutter();
+      &:nth-child(5n+1) {
+        @include span(12);
+      }
+    }
+
+    // Desktop Layout Pattern
+    @media (min-width: 1025px) {
+      @include span(4);
+      margin-top: gutter();
+      margin-bottom: gutter();
+
+      &:nth-child(10n+1),
+      &:nth-child(10n+7) {
+        @include span(8);
+      }
+    }
+  }
+}
+
+.blog-list > div {
+  background: grey;
+  height: 200px;
+}
+
+
+.image-list {
+
+    @include with-layout($onepx-gutters, true){
+        > div {
+            // .. Mobile styles for the layout here
+             padding: 2rem;
+
+            // Tablet Layout Pattern
+            @media (min-width: 768px) and (max-width: 1024px){
+              @include span(6);
+              margin-top: gutter();
+              margin-bottom: gutter();
+              &:nth-child(5n+1) {
+                @include span(12);
+              }
+            }
+
+            // Desktop Layout Pattern
+            @media (min-width: 1025px) {
+              @include span(4);
+              margin-top: gutter();
+              margin-bottom: gutter();
+
+              &:nth-child(10n+1),
+              &:nth-child(10n+7) {
+                @include span(8);
+              }
+            }
+          }
+        }
+    }
+
+.image-list > div {
+  background: grey;
+  border: 1px solid #333;
+  height: 200px;
+}
